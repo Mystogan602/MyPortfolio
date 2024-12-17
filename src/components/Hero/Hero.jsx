@@ -1,9 +1,10 @@
 import React from "react";
 import "./Hero.css";
 import profile_img from "../../assets/profile_img.svg";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 const Hero = () => {
   return (
-    <div className="hero">
+    <div id="hero" className="hero">
       <img src={profile_img} alt="Profile" />
       <h1>
         I'm <span>Pham Minh Tien</span>, Fullstack Developer Fresher
@@ -18,7 +19,9 @@ const Hero = () => {
         looking for new opportunities to learn and grow.
       </p>
       <div className="hero-action">
-        <div className="hero-connect">Connect with me</div>
+        <AnchorLink className='anchor-link' offset={50} href={`#contact`}>
+          <div className="hero-connect">Connect with me</div>
+        </AnchorLink>
         <div className="hero-resume">My Resume</div>
       </div>
     </div>
